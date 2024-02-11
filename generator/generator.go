@@ -991,7 +991,7 @@ func (g *generator) writeElementCSS(indentLevel int, n parser.Element) (err erro
 }
 
 func isScriptAttribute(name string) bool {
-	for _, prefix := range []string{"on", "hx-on:"} {
+	for _, prefix := range []string{"on", "hx-on:", "x-data", "x-init"} {
 		if strings.HasPrefix(name, prefix) {
 			return true
 		}
